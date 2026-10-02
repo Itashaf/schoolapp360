@@ -24,7 +24,7 @@ npm run lint    # ESLint
 
 ## Environment variables
 
-See `.env.example`.
+See `.env.example` (kept locally only — gitignored, not pushed to GitHub).
 
 - `MONGODB_URI` — **required**. Without it, submissions fail with a `500`
   (storage is the source of truth now, so this isn't a soft-fail).
