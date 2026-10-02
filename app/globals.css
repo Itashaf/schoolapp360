@@ -1,26 +1,115 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Brand scale — deep violet/indigo, matching the admin dashboard's sidebar chrome. */
+  --color-brand-50: #f4f2ff;
+  --color-brand-100: #e9e5ff;
+  --color-brand-200: #cdc3ff;
+  --color-brand-300: #ab9aff;
+  --color-brand-400: #8a6ef5;
+  --color-brand-500: #7048e8;
+  --color-brand-600: #6032d6;
+  --color-brand-700: #5225b8;
+  --color-brand-800: #431d94;
+  --color-brand-900: #331774;
+  --color-brand-950: #1a0d3d;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Ink — the anchor dark brand tone for the page background. */
+  --color-ink-950: #0d0821;
+  --color-ink-900: #150c33;
+  --color-ink-800: #1e1245;
+  --color-ink-700: #2a1a5c;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Accent gradient stops: violet-700 -> indigo-600 -> blue-600 */
+  --color-accent-violet: #001038;
+  --color-accent-indigo: #0060f8;
+  --color-accent-blue: #00a0f8;
+
+  --font-display: var(--font-geist-sans), "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-geist-sans), "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), "Geist Mono", ui-monospace, monospace;
+
+  --animate-toast-in: toast-in 0.3s ease-out;
+  @keyframes toast-in {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--color-brand-500);
+  color: white;
+}
+
+/* Never remove focus states — keyboard users rely on this ring. */
+:focus-visible {
+  outline: 2px solid var(--color-accent-indigo);
+  outline-offset: 2px;
+}
+
+.brand-gradient {
+  background-image: linear-gradient(
+    115deg,
+    var(--color-accent-violet) 0%,
+    var(--color-accent-indigo) 55%,
+    var(--color-accent-blue) 100%
+  );
+}
+
+.brand-gradient-dark {
+  background-image: linear-gradient(
+    115deg,
+    var(--color-accent-violet) 0%,
+    var(--color-accent-indigo) 100%
+  );
+}
+
+.brand-gradient-text {
+  background-image: linear-gradient(
+    115deg,
+    var(--color-accent-violet) 0%,
+    var(--color-accent-indigo) 55%,
+    var(--color-accent-blue) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.brand-gradient-text-light {
+  background-image: linear-gradient(
+    115deg,
+    var(--color-accent-indigo) 0%,
+    var(--color-accent-blue) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.green-gradient-text {
+  background-image: linear-gradient(115deg, #4ade80 0%, #10b981 50%, #0d9488 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(13, 8, 33, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 8, 33, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
 }
