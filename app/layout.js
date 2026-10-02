@@ -36,9 +36,6 @@ export const metadata = {
     title: `${siteConfig.name} — Launching Soon`,
     description: siteConfig.description,
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export const viewport = {

@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Page not found",
+  description: "SchoolApp 360 is launching soon. This page doesn't exist — head back to the homepage.",
 };
 
 export default function NotFound() {
