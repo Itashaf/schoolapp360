@@ -20,21 +20,23 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: `${siteConfig.name} — Launching Soon`,
+  title: `${siteConfig.name} — Enroll for Beta Testing Program`,
   description: siteConfig.description,
-  keywords: ["school ERP", "school management software", "school admin dashboard", "teacher app", "parent app"],
+  keywords: ["school management software", "school admin dashboard", "teacher app", "parent app"],
   authors: [{ name: siteConfig.name }],
   openGraph: {
     type: "website",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — Launching Soon`,
+    title: `${siteConfig.name} — Enroll for Beta Testing Program`,
     description: siteConfig.description,
+    images: [{ url: "/meta.png", width: 1672, height: 941, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — Launching Soon`,
+    title: `${siteConfig.name} — Enroll for Beta Testing Program`,
     description: siteConfig.description,
+    images: ["/meta.png"],
   },
 };
 

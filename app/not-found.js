@@ -13,7 +13,7 @@ export default function NotFound() {
         We couldn&apos;t find that page.
       </h1>
       <p className="mt-4 max-w-md text-ink-600">
-        SchoolApp 360 is launching soon — head back to the homepage to request early access.
+        SchoolApp 360 is launching soon — head back to the homepage to join beta testing.
       </p>
       <Link href="/" className="mt-8 rounded-full brand-gradient px-6 py-3 text-sm font-semibold text-white">
         Back to homepage

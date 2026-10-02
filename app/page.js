@@ -3,7 +3,7 @@ import EarlyAccessForm from "@/components/EarlyAccessForm";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata = {
-  title: "Launching Soon — Beta Testing",
+  title: "Enroll for Beta Testing Program",
   description: siteConfig.description,
   alternates: { canonical: "/" },
 };
